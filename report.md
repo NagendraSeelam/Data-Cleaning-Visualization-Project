@@ -20,3 +20,13 @@ To analyze and visualize data using Python.
 
 ## Conclusion
 This project demonstrates basic data preprocessing and visualization techniques.
+
+## Dataset Used
+Iris Flower Dataset
+
+## Data Cleaning
+- Checked for missing values
+- Verified dataset consistency
+
+## Visualization
+- Species distribution chart
