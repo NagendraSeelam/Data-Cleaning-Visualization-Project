@@ -1,19 +1,22 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-data = {
-    "Category": ["Movies", "TV Shows"],
-    "Count": [6131, 2676]
-}
+# Load dataset
+df = pd.read_csv("iris.csv")
 
-df = pd.DataFrame(data)
+print("Dataset Shape:", df.shape)
+print(df.head())
 
-print(df)
+# Check missing values
+print("\nMissing Values:")
+print(df.isnull().sum())
 
-plt.bar(df["Category"], df["Count"])
-plt.title("Movies vs TV Shows")
-plt.xlabel("Category")
+# Visualization
+plt.figure(figsize=(6,4))
+df["species"].value_counts().plot(kind="bar")
+plt.title("Count of Iris Species")
+plt.xlabel("Species")
 plt.ylabel("Count")
-plt.savefig("movies_vs_tvshows.png")
+plt.savefig("iris_species.png")
 
-print("Visualization created successfully")
+print("Project Completed Successfully")
